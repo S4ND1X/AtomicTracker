@@ -1,9 +1,23 @@
 name: ktlint
 
-on: [push, pull_request, merge_request]
+on: 
+  push:
+    paths:
+    - "**/*.kt"
+    - ".github/workflows/ktlint.yml"
+    branches:
+      - master
+      - development
+
+  pull_request:
     paths:
       - "**/*.kt"
       - ".github/workflows/ktlint.yml"
+    branches:
+      - master
+      - development
+     
+
 
  jobs:
    ktlint:
