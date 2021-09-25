@@ -1,12 +1,15 @@
 package mx.tec.atomictracker
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.drawerlayout.widget.DrawerLayout
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -14,6 +17,7 @@ class Login : AppCompatActivity() {
 
     lateinit var email : EditText
     lateinit var password : EditText
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +27,7 @@ class Login : AppCompatActivity() {
         password = findViewById(R.id.login_password)
     }
 
+    @SuppressLint("WrongConstant")
     fun login(view : View?){
         Firebase.auth.signInWithEmailAndPassword(
             email.text.toString(),
@@ -41,7 +46,7 @@ class Login : AppCompatActivity() {
 
 
 
-    public fun homeActivity(view : View?){
+    private fun homeActivity(view : View?){
         val intent = Intent(this, Home::class.java)
         startActivity(intent)
     }
