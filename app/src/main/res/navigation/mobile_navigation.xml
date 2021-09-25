@@ -6,20 +6,28 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="mx.tec.atomictracker.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:id="@+id/nav_account"
+        android:name="mx.tec.atomictracker.ui.account.AccountFragment"
+        android:label="@string/menu_account"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="mx.tec.atomictracker.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:id="@+id/nav_tracking"
+        android:name="mx.tec.atomictracker.ui.tracking.TrackingFragment"
+        android:label="@string/menu_tracking"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="mx.tec.atomictracker.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:id="@+id/nav_leaderboard"
+        android:name="mx.tec.atomictracker.ui.leaderboard.LeaderboardFragment"
+        android:label="@string/menu_leaderboard"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_calendar"
+        android:name="mx.tec.atomictracker.ui.calendar.CalendarFragment"
+        android:label="@string/menu_calendar"
+        tools:layout="@layout/fragment_slideshow" />
+
+
 </navigation>

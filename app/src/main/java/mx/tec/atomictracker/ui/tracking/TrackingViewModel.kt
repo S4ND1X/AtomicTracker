@@ -1,13 +1,13 @@
-package mx.tec.atomictracker.ui.home
+package mx.tec.atomictracker.ui.tracking
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class TrackingViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "This is gallery Fragment"
     }
     val text: LiveData<String> = _text
 }

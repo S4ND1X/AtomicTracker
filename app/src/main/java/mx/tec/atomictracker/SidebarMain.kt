@@ -37,7 +37,7 @@ class SidebarMain : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_account, R.id.nav_tracking, R.id.nav_leaderboard, R.id.nav_calendar
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
