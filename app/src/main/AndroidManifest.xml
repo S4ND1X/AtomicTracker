@@ -14,13 +14,6 @@
             android:name=".CreacionHabitoActivity"
             android:exported="true" />
         <activity
-        android:theme="@style/Theme.AtomicTracker">
-        <activity
-            android:name=".SidebarMain"
-            android:exported="true"
-            android:label="@string/title_activity_sidebar_main"
-            android:theme="@style/Theme.AtomicTracker.NoActionBar" />
-        <activity
             android:name=".Detalle"
             android:exported="true" />
         <activity
