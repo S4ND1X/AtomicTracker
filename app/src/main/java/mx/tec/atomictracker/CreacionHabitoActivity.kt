@@ -59,6 +59,7 @@ class CreacionHabitoActivity : AppCompatActivity() {
         // Guardar datos debajo del usuario y debajo de sus habitos
         myRef.child(user).push().setValue(habit)
 
+
         Toast.makeText(this, "Se guardo el habito correctamente", Toast.LENGTH_SHORT ).show()
 
 
