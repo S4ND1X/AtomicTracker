@@ -39,7 +39,7 @@
         app:layout_constraintStart_toStartOf="@+id/button7" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/crear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
@@ -56,8 +56,8 @@
         android:layout_marginStart="19dp"
         android:layout_marginBottom="29dp"
         android:text="Habitos"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
-        app:layout_constraintStart_toStartOf="@+id/button8" />
+        app:layout_constraintBottom_toTopOf="@+id/crear"
+        app:layout_constraintStart_toStartOf="@+id/crear" />
 
     <TextView
         android:id="@+id/textView18"

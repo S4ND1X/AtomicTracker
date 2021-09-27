@@ -15,9 +15,10 @@
         android:layout_marginBottom="55dp"
         android:text="Nuevo Habito"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/nombre"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <TextView
         android:id="@+id/textView13"
@@ -26,13 +27,13 @@
         android:layout_marginBottom="24dp"
         android:text="Recordatorio"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/switch1"
+        app:layout_constraintBottom_toTopOf="@+id/recordar"
         app:layout_constraintEnd_toEndOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTime4" />
+        app:layout_constraintTop_toBottomOf="@+id/fin" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/recordar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -43,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <EditText
-        android:id="@+id/editTextTime4"
+        android:id="@+id/fin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="49dp"
@@ -60,9 +61,9 @@
         android:layout_marginStart="3dp"
         android:layout_marginBottom="4dp"
         android:text="Inicio"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTime3"
-        app:layout_constraintStart_toStartOf="@+id/editTextTime3"
-        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView" />
+        app:layout_constraintBottom_toTopOf="@+id/inicio"
+        app:layout_constraintStart_toStartOf="@+id/inicio"
+        app:layout_constraintTop_toBottomOf="@+id/frecuencia" />
 
     <TextView
         android:id="@+id/textView15"
@@ -71,12 +72,12 @@
         android:layout_marginStart="1dp"
         android:layout_marginBottom="3dp"
         android:text="Fin"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTime4"
-        app:layout_constraintStart_toStartOf="@+id/editTextTime3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
+        app:layout_constraintBottom_toTopOf="@+id/fin"
+        app:layout_constraintStart_toStartOf="@+id/inicio"
+        app:layout_constraintTop_toBottomOf="@+id/inicio" />
 
     <EditText
-        android:id="@+id/editTextTime3"
+        android:id="@+id/inicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
@@ -88,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView"
+        android:id="@+id/frecuencia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="23dp"
@@ -102,12 +103,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Frecuencia"
-        app:layout_constraintBottom_toTopOf="@+id/autoCompleteTextView"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintBottom_toTopOf="@+id/frecuencia"
+        app:layout_constraintStart_toStartOf="@+id/descripcion"
+        app:layout_constraintTop_toBottomOf="@+id/descripcion" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/nombre"
         android:layout_width="147dp"
         android:layout_height="0dp"
         android:layout_marginStart="56dp"
@@ -115,12 +116,12 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nombre"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/descripcion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/descripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="13dp"
@@ -128,15 +129,18 @@
         android:inputType="textPersonName"
         android:text="Descripcion"
         app:layout_constraintBottom_toTopOf="@+id/textView16"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toStartOf="@+id/nombre"
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/agregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="34dp"
+        android:onClick="createHabit"
         android:text="Agregar"
-        tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="649dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
