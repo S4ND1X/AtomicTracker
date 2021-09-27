@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -37,12 +38,6 @@ class Login : AppCompatActivity() {
             password.text.toString()).addOnCompleteListener(this){
                 if(it.isSuccessful){
                     Log.d("FIREBASE", "Registro exitoso")
-                    val user = email.text.toString().split('@')[0]
-                    if (user != null) {
-                        // Guardar usuario debajo de Users
-                        myRef.setValue(user)
-                    }
-
                     homeActivity(null)
 
 

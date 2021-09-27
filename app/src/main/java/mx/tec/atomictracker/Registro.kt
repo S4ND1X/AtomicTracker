@@ -29,6 +29,11 @@ class Registro : AppCompatActivity() {
             password.text.toString()).addOnCompleteListener(this){
                 if(it.isSuccessful){
                     Log.d("FIREBASE", "Registro exitoso")
+                    val user = email.text.toString().split('@')[0]
+                    if (user != null) {
+                        // Guardar usuario debajo de Users
+                        myRef.setValue(user)
+                    }
                     loginActivity(null)
                 }else{
                     Log.d("FIREBASE", "Registro fallido : ${it.exception?.message}")
