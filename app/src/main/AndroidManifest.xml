@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.atomictracker">
+    package="mx.tec.atomictracker">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AtomicTracker">
         <activity
-            android:name=".MainActivity"
+            android:name=".HabitList"
+            android:exported="true" />
+        <activity
+            android:name=".HomeScreenActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CreacionHabitoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Detalle"
+            android:exported="true" />
+        <activity
+            android:name=".Home"
+            android:exported="true" />
+        <activity
+            android:name=".Registro"
+            android:exported="true" />
+        <activity
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

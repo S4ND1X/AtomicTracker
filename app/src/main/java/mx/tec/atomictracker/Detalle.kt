@@ -1,12 +1,11 @@
-package com.example.atomictracker
+package mx.tec.atomictracker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import mx.tec.atomictracker.R
 
-class MainActivity : AppCompatActivity() {
+class Detalle : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_detalle)
     }
 }

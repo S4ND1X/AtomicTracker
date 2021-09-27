@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "134042100290",
+    "project_id": "atomic-tracker",
+    "storage_bucket": "atomic-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134042100290:android:e94988f22cd583839003db",
+        "android_client_info": {
+          "package_name": "mx.tec.atomictracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134042100290-e3m6qrbnqemct6rv8prrre4uqra4ec5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDow1zEzfLVBfODw1ZhL7CCkAhiO-DQtvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134042100290-e3m6qrbnqemct6rv8prrre4uqra4ec5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
