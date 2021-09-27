@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/activity_detalle.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/layout/activity_editar.xml" value="0.1765625" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/layout/activity_prov_menu.xml" value="0.19166666666666668" />
