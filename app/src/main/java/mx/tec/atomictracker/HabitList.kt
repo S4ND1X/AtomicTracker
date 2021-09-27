@@ -47,6 +47,14 @@ class HabitList : AppCompatActivity() {
 
                     for (habitSnapshot in snapshot.children){
                         val habit = habitSnapshot.getValue(HabitDTO::class.java)
+                        val habitID = habitSnapshot.key
+                        if (habit != null) {
+                            if (habitID != null) {
+                                habit.id = habitID
+                            }
+                        }
+
+
                         habitArrayList.add(habit!!)
                     }
 
