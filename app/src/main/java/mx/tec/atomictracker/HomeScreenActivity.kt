@@ -38,4 +38,10 @@ class HomeScreenActivity : AppCompatActivity() {
         intent.putExtra("email", email)
         startActivity(intent)
     }
+
+    fun habitosActivity(view: View?){
+        val intent = Intent(this, HabitList::class.java)
+        intent.putExtra("email", email)
+        startActivity(intent)
+    }
 }

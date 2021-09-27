@@ -68,4 +68,16 @@
         android:text="Perfil"
         app:layout_constraintStart_toStartOf="@+id/button5"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ver_habitos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:onClick="habitosActivity"
+        android:text="Habitos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button7" />
 </androidx.constraintlayout.widget.ConstraintLayout>
