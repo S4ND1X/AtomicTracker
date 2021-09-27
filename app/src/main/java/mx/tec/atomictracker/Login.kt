@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class Login : AppCompatActivity() {
@@ -18,6 +19,8 @@ class Login : AppCompatActivity() {
     lateinit var email : EditText
     lateinit var password : EditText
 
+    private val database = Firebase.database;
+    private val myRef = database.getReference("Users")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +37,12 @@ class Login : AppCompatActivity() {
             password.text.toString()).addOnCompleteListener(this){
                 if(it.isSuccessful){
                     Log.d("FIREBASE", "Registro exitoso")
+                    val user = email.text.toString().split('@')[0]
+                    if (user != null) {
+                        // Guardar usuario debajo de Users
+                        myRef.setValue(user)
+                    }
+
                     homeActivity(null)
 
 
@@ -47,7 +56,8 @@ class Login : AppCompatActivity() {
 
 
     private fun homeActivity(view : View?){
-        val intent = Intent(this, Home::class.java)
+        val intent = Intent(this, HomeScreenActivity::class.java)
+        intent.putExtra("email", email.text.toString())
         startActivity(intent)
     }
 
