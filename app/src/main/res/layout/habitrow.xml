@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_margin="12dp"
+    card_view:cardBackgroundColor="#C42DE0"
+    card_view:cardCornerRadius="20dp"
+    card_view:cardElevation="6dp"
+    card_view:contentPadding="4dp"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="211dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="26dp"
+            android:text="Nombre:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_name4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="68dp"
+            android:text="Descripción:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_name5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="124dp"
+            android:text="Frecuencia:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cardName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="69dp"
+            android:layout_marginTop="-24dp"
+            android:text="Nombre"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            card_view:layout_constraintLeft_toRightOf="@+id/item_name"
+            card_view:layout_constraintStart_toEndOf="@+id/item_name"
+            card_view:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+        <TextView
+            android:id="@+id/cardDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="28dp"
+            android:text="Descripcion"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            card_view:layout_constraintLeft_toRightOf="@+id/item_name"
+            card_view:layout_constraintStart_toEndOf="@+id/item_name"
+            card_view:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+        <TextView
+            android:id="@+id/cardFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="84dp"
+            android:text="Frecuencia"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            card_view:layout_constraintLeft_toRightOf="@+id/item_name"
+            card_view:layout_constraintStart_toEndOf="@+id/item_name"
+            card_view:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+        <TextView
+            android:id="@+id/item_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jose"
+            android:textColor="@color/white"
+            android:textSize="0sp"
+            android:textStyle="bold"
+            card_view:layout_constraintLeft_toRightOf="@+id/item_name"
+            card_view:layout_constraintStart_toEndOf="@+id/item_name"
+            card_view:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+        <TextView
+            android:id="@+id/item_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jose"
+            android:textColor="@color/white"
+            android:textSize="0sp"
+            android:textStyle="bold"
+            card_view:layout_constraintLeft_toRightOf="@+id/item_name"
+            card_view:layout_constraintStart_toEndOf="@+id/item_name"
+            card_view:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+        <TextView
+            android:id="@+id/item_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jose"
+            android:textColor="@color/white"
+            android:textSize="0sp"
+            android:textStyle="bold"
+            card_view:layout_constraintLeft_toRightOf="@+id/item_name"
+            card_view:layout_constraintStart_toEndOf="@+id/item_name"
+            card_view:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
