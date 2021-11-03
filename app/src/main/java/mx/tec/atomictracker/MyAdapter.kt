@@ -56,8 +56,6 @@ class MyAdapter(private val habitList : ArrayList<HabitDTO>) : RecyclerView.Adap
         val hRecordar : TextView = itemView.findViewById(R.id.hRecordar)
         val hEliminar : Button = itemView.findViewById(R.id.hEliminar)
 
-
-
     }
 
 }

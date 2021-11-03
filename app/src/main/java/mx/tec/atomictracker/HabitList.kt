@@ -2,6 +2,7 @@ package mx.tec.atomictracker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
@@ -66,7 +67,7 @@ class HabitList : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                Toast.makeText(habitRecyclerView.context, error.toString(), Toast.LENGTH_LONG)
             }
 
         })
