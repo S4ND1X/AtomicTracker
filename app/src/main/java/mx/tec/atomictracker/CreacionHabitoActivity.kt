@@ -50,6 +50,7 @@ class CreacionHabitoActivity : AppCompatActivity() {
             inicio = inicioField.text.toString()
             fin = finField.text.toString()
             recordar = recordarField.isChecked
+            // poner el field de longitud y latitud
         }
 
         // Obtener el user del email haciendo un split porque no se pueden guardar usuarios con ., @, etc

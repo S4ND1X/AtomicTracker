@@ -10,6 +10,7 @@
 
     <string name="firebase_users">Users</string>
     <string name="firebase_habits">Habits</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 
 </resources>

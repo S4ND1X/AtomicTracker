@@ -55,13 +55,10 @@ class HabitList : AppCompatActivity() {
                             }
                         }
 
-
                         habitArrayList.add(habit!!)
                     }
 
-                    habitRecyclerView.adapter = MyAdapter(habitArrayList)
-
-
+                    habitRecyclerView.adapter = MyAdapter(habitArrayList, baseContext)
                 }
 
             }
