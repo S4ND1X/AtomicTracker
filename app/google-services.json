@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "854969184995",
+    "project_id": "rework-atomic-tracker",
+    "storage_bucket": "rework-atomic-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854969184995:android:9f277a4be75f80a7cb8bd6",
+        "android_client_info": {
+          "package_name": "com.example.atomictracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854969184995-2v54q12pt6g37kenj4tf896m3tol9d38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdNfOsVKGQay3TGOMJRDHux_5N9luIjw8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854969184995-2v54q12pt6g37kenj4tf896m3tol9d38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
