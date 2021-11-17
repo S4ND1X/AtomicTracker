@@ -40,6 +40,15 @@ class SignInActivity : AppCompatActivity() {
                 }
             }
         }
+
+        /**
+         * When click on signup then load SignUpActivity
+         */
+        binding.signUpTextView.setOnClickListener {
+            val intent = Intent(baseContext, SignUpActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     /**
