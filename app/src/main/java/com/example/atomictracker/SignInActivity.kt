@@ -43,7 +43,8 @@ class SignInActivity : AppCompatActivity() {
     }
 
     /**
-     *
+     * Check on start of activity if currentUser is authenticated
+     * If yes then load MainActivity
      */
     public override fun onStart() {
         super.onStart()
@@ -54,7 +55,9 @@ class SignInActivity : AppCompatActivity() {
     }
 
     /**
-     *
+     * @param email obtained from ui
+     * @param password obtained from ui
+     * If SignIn successful then load MainActivity
      */
     private fun SignIn(email: String, password: String){
         auth.signInWithEmailAndPassword(email, password)
