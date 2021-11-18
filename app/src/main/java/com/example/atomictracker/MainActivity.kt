@@ -21,8 +21,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         auth = Firebase.auth
 
-        signOut()
 
+        binding.button.setOnClickListener {
+            signOut()
+        }
     }
 
 

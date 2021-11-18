@@ -68,6 +68,24 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     /**
+     * Check on start of activity if currentUser is authenticated
+     * If yes then load MainActivity
+     */
+    public override fun onStart() {
+        super.onStart()
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            // If email is verified then load main activity if not then load CheckEmailActivity
+            if(currentUser.isEmailVerified){
+                reload()
+            }else{
+                val intent = Intent(this, CheckEmailActivity::class.java)
+                startActivity(intent)
+            }
+        }
+    }
+
+    /**
      * Register user in firebase
      * if successful then show message
      * else show error message
@@ -76,7 +94,9 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Log.d("TAG", "createUserWithEmail:success")
+                    // Redirect to verify the email
+                    val intent = Intent(this, CheckEmailActivity::class.java)
+                    startActivity(intent)
                 } else {
                     Log.w("TAG", "createUserWithEmail:failure", task.exception)
                     Toast.makeText(baseContext, "Authentication failed.",
@@ -85,5 +105,11 @@ class SignUpActivity : AppCompatActivity() {
             }
     }
 
-
+    /**
+     *
+     */
+    private fun reload(){
+        val intent = Intent(this, MainActivity::class.java)
+        this.startActivity(intent)
+    }
 }

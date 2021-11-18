@@ -59,7 +59,13 @@ class SignInActivity : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         if(currentUser != null){
-            reload();
+            // If email is verified then load main activity if not then load CheckEmailActivity
+            if(currentUser.isEmailVerified){
+                reload()
+            }else{
+                val intent = Intent(this, CheckEmailActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 
