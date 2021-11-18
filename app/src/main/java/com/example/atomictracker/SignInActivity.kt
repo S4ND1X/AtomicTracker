@@ -49,6 +49,14 @@ class SignInActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        /**
+         * When click on forget password then load SignUpActivity
+         */
+        binding.recoveryAccountTextView.setOnClickListener {
+            val intent = Intent(baseContext, AccountRecoveryActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     /**
@@ -59,7 +67,13 @@ class SignInActivity : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         if(currentUser != null){
-            reload();
+            // If email is verified then load main activity if not then load CheckEmailActivity
+            if(currentUser.isEmailVerified){
+                reload()
+            }else{
+                val intent = Intent(this, CheckEmailActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 
