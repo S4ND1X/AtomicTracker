@@ -49,6 +49,14 @@ class SignInActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        /**
+         * When click on forget password then load SignUpActivity
+         */
+        binding.recoveryAccountTextView.setOnClickListener {
+            val intent = Intent(baseContext, AccountRecoveryActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     /**
