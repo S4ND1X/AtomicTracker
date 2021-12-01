@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AtomicTracker">
         <activity
+            android:name=".DeleteAccountActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UpdatePasswordActivity"
+            android:exported="true" />
+        <activity
             android:name=".AccountRecoveryActivity"
             android:exported="true" />
         <activity
@@ -20,7 +26,8 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.Main" />
         <activity
             android:name=".SignInActivity"
             android:exported="true">
