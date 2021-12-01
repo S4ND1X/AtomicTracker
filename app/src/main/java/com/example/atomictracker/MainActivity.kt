@@ -44,6 +44,16 @@ class MainActivity : AppCompatActivity() {
             fileManager()
         }
 
+        binding.updatePasswordTextView.setOnClickListener{
+            val intent = Intent(this, UpdatePasswordActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.deleteAccountTextView.setOnClickListener{
+            val intent = Intent(this, DeleteAccountActivity::class.java)
+            startActivity(intent)
+        }
+
         updateUI()
     }
 

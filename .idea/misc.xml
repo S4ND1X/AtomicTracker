@@ -6,9 +6,11 @@
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.37135416666666665" />
         <entry key="app/src/main/res/layout/activity_account_recovery.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_check_email.xml" value="0.34322916666666664" />
+        <entry key="app/src/main/res/layout/activity_delete_account.xml" value="0.26510416666666664" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.34322916666666664" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.3378623188405797" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.307518115942029" />
+        <entry key="app/src/main/res/layout/activity_update_password.xml" value="0.3145833333333333" />
       </map>
     </option>
   </component>
