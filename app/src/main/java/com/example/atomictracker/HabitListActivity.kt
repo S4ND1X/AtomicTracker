@@ -64,7 +64,7 @@ class HabitListActivity : AppCompatActivity() {
                         habitArrayList.add(habit!!)
                     }
 
-                    habitRecyclerView.adapter = MyAdapter(habitArrayList)
+                    habitRecyclerView.adapter = MyAdapter(habitArrayList, this@HabitListActivity)
 
 
                 }

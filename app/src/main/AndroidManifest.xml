@@ -17,6 +17,10 @@
             android:enabled="true" />
 
         <activity
+            android:name=".DetailHabitActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".HabitListActivity"
             android:exported="true" />
         <activity
