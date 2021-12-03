@@ -39,4 +39,11 @@
     <string name="hora">Hora de notificacion</string>
     <string name="start_date">Fecha de inicio</string>
     <string name="date_picker">Elegir fecha</string>
+    <string name="name_card">Nombre:</string>
+    <string name="frequency_card">Frequencia:</string>
+    <string name="notification_card">Notificacion:</string>
+    <string name="start_card">Inicio:</string>
+    <string name="hour_card">Hora:</string>
+    <string name="delete_card">Eliminar</string>
+    <string name="habit_list">Lista de Habitos</string>
 </resources>

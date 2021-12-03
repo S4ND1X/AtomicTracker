@@ -8,7 +8,8 @@ data class HabitDTO(
     var month: Int,
     var day: Int,
     var hour: Int,
-    var minute: Int
+    var minute: Int,
+    var id: String
 ) {
 
     constructor() : this(
@@ -19,7 +20,8 @@ data class HabitDTO(
         0,
         0,
         0,
-        0
+        0,
+        ""
     )
 
 
