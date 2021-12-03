@@ -5,9 +5,12 @@ import android.app.TimePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import java.sql.Time
 import java.util.*
 
 class CreateHabitActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener{
+
+    var cal = Calendar.getInstance()
 
     var day = 0
     var month = 0
@@ -34,7 +37,8 @@ class CreateHabitActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
     }
 
     private fun getDateTimeCalendar() {
-        val cal:Calendar = Calendar.getInstance()
+        cal = Calendar.getInstance()
+
         day = cal.get(Calendar.DAY_OF_MONTH)
         month = cal.get(Calendar.MONTH)
         year = cal.get(Calendar.YEAR)
@@ -43,16 +47,19 @@ class CreateHabitActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
     }
 
     private fun pickDate(){
-        val date_picker_button : Button = findViewById(R.id.date_picker_button)
-        date_picker_button.setOnClickListener{
+        val datePickerBtn : Button = findViewById(R.id.date_picker_button)
+        datePickerBtn.setOnClickListener{
             getDateTimeCalendar()
-            DatePickerDialog(this, this, year, month, day).show()
+
+            val picker = DatePickerDialog(this, this, year, month, day)
+            picker.datePicker.minDate = cal.timeInMillis
+            picker.show()
         }
     }
 
     private fun pickHour(){
-        val hour_picker_button : Button = findViewById(R.id.hour_picker_button)
-        hour_picker_button.setOnClickListener{
+        val hourPickerBtn : Button = findViewById(R.id.hour_picker_button)
+        hourPickerBtn.setOnClickListener{
             getDateTimeCalendar()
             TimePickerDialog(this, this, hour, minute, true).show()
         }

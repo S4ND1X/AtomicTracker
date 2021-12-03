@@ -62,7 +62,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="32dp"
-            android:background="@drawable/ic_buttom"
+            android:background="@drawable/ic_button"
             android:paddingLeft="64dp"
             android:paddingRight="64dp"
             android:text="@string/delete"

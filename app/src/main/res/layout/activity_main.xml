@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/create_habit"
         android:layout_centerInParent="true"
-        android:background="@drawable/ic_buttom"
+        android:background="@drawable/ic_button"
         android:paddingLeft="64dp"
         android:paddingRight="64dp"
         />
