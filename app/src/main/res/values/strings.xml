@@ -29,4 +29,14 @@
     <string name="subtitle_delete_account">Por motivos de seguridad para eliminar tu cuenta por completo, debes de ingresar tu contraseña.</string>
     <string name="delete">Eliminar</string>
     <string name="create_habit">Crear Habito</string>
+    <string name="title_create_habit">Crear Habito</string>
+    <string name="habit_name">Nombre</string>
+    <string name="habit_frequency">Frecuencia</string>
+    <string name="habit_notification">Notificacion</string>
+    <string name="habit_notification_switch">Activar</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="hora">Hora de notificacion</string>
+    <string name="start_date">Fecha de inicio</string>
+    <string name="date_picker">Elegir fecha</string>
 </resources>

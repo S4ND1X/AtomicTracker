@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="frequency_array">
+        <item>Diario</item>
+        <item>Cada 2 dias</item>
+        <item>Cada 3 dias</item>
+        <item>Cada 4 dias</item>
+        <item>Cada 5 dias</item>
+        <item>Cada 6 dias</item>
+        <item>Semanalmente</item>
+        <item>Mensualmente</item>
+    </string-array>
+</resources>

@@ -19,10 +19,9 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.createHabitBtn.setOnClickListener {
-            val intent = Intent(this, UserProfileActivity::class.java)
+            val intent = Intent(this, CreateHabitActivity::class.java)
             startActivity(intent)
         }
-
 
     }
 }
