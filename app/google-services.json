@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "854969184995",
+    "firebase_url": "https://rework-atomic-tracker-default-rtdb.firebaseio.com",
     "project_id": "rework-atomic-tracker",
     "storage_bucket": "rework-atomic-tracker.appspot.com"
   },
