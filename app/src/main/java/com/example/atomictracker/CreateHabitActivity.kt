@@ -1,12 +1,15 @@
 package com.example.atomictracker
 
-import android.app.DatePickerDialog
-import android.app.TimePickerDialog
+import android.app.*
+import android.content.Context
+import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.atomictracker.databinding.ActivityCreateHabitBinding
 import com.google.firebase.auth.ktx.auth
@@ -38,6 +41,7 @@ class CreateHabitActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
     private lateinit var binding: ActivityCreateHabitBinding
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -88,9 +92,76 @@ class CreateHabitActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
                         hName, hFrequency, hNotification, savedYear,
                         savedMonth, savedDay, savedHour, savedMinute
                     )
+
+                    scheduleNotification(hName)
                 }
             }
         }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun scheduleNotification(name: String) {
+        val intent = Intent(applicationContext, ReminderBroadcaster::class.java)
+        val title = name
+        val message = "Es tiempo de $name"
+
+        intent.putExtra(titleExtra, title)
+        intent.putExtra(messageExtra, message)
+
+        val pendingIntent = PendingIntent.getBroadcast(
+            applicationContext,
+            notificationID,
+            intent,
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+        )
+
+        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val time = getTime()
+        alarmManager.setExactAndAllowWhileIdle(
+            AlarmManager.RTC_WAKEUP,
+            time,
+            pendingIntent
+        )
+
+        showAlert(time, title, message)
+
+
+    }
+
+    private fun showAlert(time: Long, title: String, message: String) {
+        val date = Date(time)
+        val dateFormat = android.text.format.DateFormat.getLongDateFormat(applicationContext)
+        val timeFormat = android.text.format.DateFormat.getTimeFormat(applicationContext)
+
+        AlertDialog.Builder(this)
+            .setTitle("Notification Scheduled")
+            .setMessage(
+                "Title: " + title +
+                        "\nMessage: " + message +
+                        "\nAt " + dateFormat.format(date) + " " + timeFormat.format(date)
+            )
+            .setPositiveButton("Okay") { _, _ -> }
+            .show()
+
+
+    }
+
+    private fun getTime(): Long {
+        val calendar = Calendar.getInstance()
+        calendar.set(savedYear, savedMonth, savedDay, savedHour, savedMinute)
+        return calendar.timeInMillis
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun createNotificationChannel() {
+        val name = "Habits Reminder Channel"
+        val description = "Channel to send reminder of your habit"
+        val importance = NotificationManager.IMPORTANCE_DEFAULT
+        val channel = NotificationChannel(channelID, name, importance)
+        channel.description = description
+        val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.createNotificationChannel(channel)
+
     }
 
     private fun createHabit(
@@ -111,7 +182,7 @@ class CreateHabitActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
             minute = hMinute
         }
 
-        val userName : String = Firebase.auth.currentUser?.email?.split('@')?.get(0) ?: ""
+        val userName: String = Firebase.auth.currentUser?.email?.split('@')?.get(0) ?: ""
 
         myRef.child(userName).push().setValue(habit)
 
