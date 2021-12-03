@@ -1,16 +1,19 @@
 package com.example.atomictracker
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class MyAdapter(private val habitList: ArrayList<HabitDTO>) :
+class MyAdapter(private val habitList: ArrayList<HabitDTO>, private val padre: Context) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     private val database = Firebase.database;
@@ -41,7 +44,15 @@ class MyAdapter(private val habitList: ArrayList<HabitDTO>) :
             val user: String = Firebase.auth.currentUser?.email?.split('@')?.get(0).toString()
             myRef.child(user).child(currentItem.id).removeValue()
         }
-
+        holder.detail.setOnClickListener{
+            val intent = Intent(padre, DetailHabitActivity::class.java)
+            intent.putExtra("nombre",currentItem.name)
+            intent.putExtra("frecuencia",currentItem.frequency)
+            intent.putExtra("notificacion",if (currentItem.notification) "Activadas" else "Desactivadas")
+            intent.putExtra("inicio",date)
+            intent.putExtra("hora",time)
+            padre.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -56,8 +67,7 @@ class MyAdapter(private val habitList: ArrayList<HabitDTO>) :
         val start: TextView = itemView.findViewById(R.id.start_card)
         val hour: TextView = itemView.findViewById(R.id.hour_card)
         val delete: Button = itemView.findViewById(R.id.delete_card)
-
-
+        val detail: Button = itemView.findViewById(R.id.detail_card)
     }
 
 }

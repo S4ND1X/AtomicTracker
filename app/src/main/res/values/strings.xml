@@ -34,6 +34,7 @@
     <string name="habit_frequency">Frecuencia</string>
     <string name="habit_notification">Notificacion</string>
     <string name="habit_notification_switch">Activar</string>
+    <string name="habit_date">Fecha de inicio</string>
     <string name="on">ON</string>
     <string name="off">OFF</string>
     <string name="hora">Hora de notificacion</string>
@@ -46,4 +47,6 @@
     <string name="hour_card">Hora:</string>
     <string name="delete_card">Eliminar</string>
     <string name="habit_list">Lista de Habitos</string>
+    <string name="detalles">Detalles</string>
+    <string name="na">No Disponible</string>
 </resources>
