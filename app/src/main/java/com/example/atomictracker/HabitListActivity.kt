@@ -2,6 +2,7 @@ package com.example.atomictracker
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.atomictracker.databinding.ActivityHabitListBinding
 import com.google.firebase.auth.ktx.auth
@@ -31,6 +32,8 @@ class HabitListActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         habitRecyclerView = binding.habitList
+        habitRecyclerView.layoutManager = LinearLayoutManager(this)
+        habitRecyclerView.setHasFixedSize(true)
 
         habitArrayList = arrayListOf<HabitDTO>()
 
