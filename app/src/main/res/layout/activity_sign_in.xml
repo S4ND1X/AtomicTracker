@@ -23,7 +23,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:contentDescription="@string/all"
-            app:srcCompat="@drawable/ic_logo"
+            app:srcCompat="@drawable/logo"
             tools:ignore="VectorDrawableCompat" />
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/title_active_login"
+            android:text="@string/app_name"
             android:textColor="@color/black"
             android:textSize="24sp" />
     </LinearLayout>
@@ -116,24 +116,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="@string/text_signup"
-            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/signUpTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="0"
             android:text="@string/link_signup"
-            android:textColor="#ff9900"
-            android:textSize="24sp" />
+            android:textColor="@color/purple_200"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/text_signup"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.846" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

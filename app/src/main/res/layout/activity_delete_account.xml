@@ -23,7 +23,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginRight="24dp"
             android:gravity="center"
-            android:text="Delete Account"
+            android:text="@string/title_delete_account"
             android:textColor="@color/black_500"
             android:textSize="24sp" />
 
@@ -35,7 +35,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginRight="24dp"
             android:gravity="center"
-            android:text="Enter your password to proceed."
+            android:text="@string/subtitle_delete_account"
             android:textSize="16sp" />
 
         <EditText
@@ -51,7 +51,7 @@
             android:drawableLeft="@drawable/ic_lock"
             android:drawablePadding="16dp"
             android:ems="10"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:maxLength="16"
             android:padding="16dp" />
@@ -65,7 +65,7 @@
             android:background="@drawable/ic_buttom"
             android:paddingLeft="64dp"
             android:paddingRight="64dp"
-            android:text="Delete"
+            android:text="@string/delete"
             android:textColor="@color/white" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
