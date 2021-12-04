@@ -49,4 +49,8 @@
     <string name="habit_list">Lista de Habitos</string>
     <string name="detalles">Detalles</string>
     <string name="na">No Disponible</string>
+    <string name="facebook">Facebook</string>
+    <string name="facebook_app_id">438600157805878</string> <string name="fb_login_protocol_scheme">fb438600157805878</string>
+    <string name="profile_btn">Ver Perfil</string>
+
 </resources>
