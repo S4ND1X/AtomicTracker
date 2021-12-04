@@ -49,4 +49,8 @@
     <string name="habit_list">Lista de Habitos</string>
     <string name="detalles">Detalles</string>
     <string name="na">No Disponible</string>
+    <string name="youtube_title">Añadir un video de Youtube</string>
+    <string name="url">URL</string>
+    <string name="video_card">Video:</string>
+    <string name="video">Video</string>
 </resources>

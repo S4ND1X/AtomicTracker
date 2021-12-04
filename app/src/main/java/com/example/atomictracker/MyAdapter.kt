@@ -40,6 +40,7 @@ class MyAdapter(private val habitList: ArrayList<HabitDTO>, private val padre: C
         holder.notification.text = if (currentItem.notification) "Activadas" else "Desactivadas"
         holder.start.text = date
         holder.hour.text = time
+        holder.video.text = currentItem.url
         holder.delete.setOnClickListener {
             val user: String = Firebase.auth.currentUser?.email?.split('@')?.get(0).toString()
             myRef.child(user).child(currentItem.id).removeValue()
@@ -51,6 +52,7 @@ class MyAdapter(private val habitList: ArrayList<HabitDTO>, private val padre: C
             intent.putExtra("notificacion",if (currentItem.notification) "Activadas" else "Desactivadas")
             intent.putExtra("inicio",date)
             intent.putExtra("hora",time)
+            intent.putExtra("video", currentItem.url)
             padre.startActivity(intent)
         }
     }
@@ -68,6 +70,7 @@ class MyAdapter(private val habitList: ArrayList<HabitDTO>, private val padre: C
         val hour: TextView = itemView.findViewById(R.id.hour_card)
         val delete: Button = itemView.findViewById(R.id.delete_card)
         val detail: Button = itemView.findViewById(R.id.detail_card)
+        val video: TextView = itemView.findViewById(R.id.video_card)
     }
 
 }

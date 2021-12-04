@@ -1,5 +1,7 @@
 package com.example.atomictracker
 
+import java.net.URL
+
 data class HabitDTO(
     var name: String,
     var frequency: String,
@@ -9,7 +11,8 @@ data class HabitDTO(
     var day: Int,
     var hour: Int,
     var minute: Int,
-    var id: String
+    var id: String,
+    var url: String,
 ) {
 
     constructor() : this(
@@ -21,7 +24,8 @@ data class HabitDTO(
         0,
         0,
         0,
-        ""
+        "",
+        "undefined"
     )
 
 

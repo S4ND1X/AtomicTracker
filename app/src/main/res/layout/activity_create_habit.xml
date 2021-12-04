@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -144,6 +145,33 @@
             android:textColor="@color/white"
             tools:text="@string/date_picker" />
 
+        <TextView
+            android:id="@+id/ytTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="28dp"
+            android:gravity="start"
+            android:text="@string/youtube_title"
+            android:textColor="@color/black_500"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/habit_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/ic_field"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/url"
+            android:inputType="textShortMessage"
+            android:maxLength="16"
+            android:padding="16dp" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/createHabitButton"
             android:layout_width="wrap_content"
@@ -157,5 +185,7 @@
             android:textColor="@color/white"
             tools:text="@string/create_habit" />
 
+
+
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
