@@ -1,49 +1,15 @@
 <resources>
     <string name="app_name">Atomic Tracker</string>
-    <string name="password">Contraseña</string>
-    <string name="new_password">Nueva contraseña</string>
-    <string name="current_password">Contraseña actual</string>
-    <string name="name">Nombre completo</string>
-    <string name="email">Email</string>
-    <string name="login">Login</string>
-    <string name="repeat_password">Confirma la contraseña</string>
-    <string name="signup">Sign Up</string>
-    <string name="text_signup">¿No tienes cuenta?</string>
-    <string name="link_signup">Sign up</string>
-    <string name="all">TODO</string>
-    <string name="user_email">userdefault@gmail.com</string>
-    <string name="user_name">User Default</string>
-    <string name="update_profile">Guardar</string>
-    <string name="delete_account">Eliminar cuenta</string>
-    <string name="change_password">Cambiar contraseña</string>
-    <string name="forget_password">¿Olvidaste tu contraseña?</string>
-    <string name="title_check_email">Verificacion de Email</string>
-    <string name="subtitle_check_email">Para completar su registro. ¡Por favor! verifica su correo y después de clic en continuar.</string>
-    <string name="continue_check_email">Continuar</string>
-    <string name="title_account_recovery">Recuperación de la cuenta</string>
-    <string name="subtitle_account_recovery">Ingresa tu email para que se te pueda enviar un correo con los pasos para cambiar tu contraseña.</string>
-    <string name="recovery_account">Enviar</string>
-    <string name="title_update_password">Cambio de contraseña</string>
-    <string name="subtitle_update_password">Por motivos de seguridad para cambiar tu contraseña, primero debes ingresar tu contraseña actual.</string>
-    <string name="title_delete_account">Eliminar cuenta</string>
-    <string name="subtitle_delete_account">Por motivos de seguridad para eliminar tu cuenta por completo, debes de ingresar tu contraseña.</string>
-    <string name="delete">Eliminar</string>
-    <string name="create_habit">Crear Habito</string>
-    <string name="title_create_habit">Crear Habito</string>
-    <string name="habit_name">Nombre</string>
-    <string name="habit_frequency">Frecuencia</string>
-    <string name="habit_notification">Notificacion</string>
-    <string name="habit_notification_switch">Activar</string>
-    <string name="on">ON</string>
-    <string name="off">OFF</string>
-    <string name="hora">Hora de notificacion</string>
-    <string name="start_date">Fecha de inicio</string>
-    <string name="date_picker">Elegir fecha</string>
-    <string name="name_card">Nombre:</string>
-    <string name="frequency_card">Frequencia:</string>
-    <string name="notification_card">Notificacion:</string>
-    <string name="start_card">Inicio:</string>
-    <string name="hour_card">Hora:</string>
-    <string name="delete_card">Eliminar</string>
-    <string name="habit_list">Lista de Habitos</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="facebook_app_id">[APP_ID]</string> <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
+    <string-array name="Frecuencias">
+        <item>Diariamente</item>
+        <item>Semanalmente</item>
+        <item>Mensualmente</item>
+        <item>Cada dos dias</item>
+        <item>Unica vez</item>
+    </string-array>
 </resources>

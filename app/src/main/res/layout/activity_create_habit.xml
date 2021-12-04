@@ -4,158 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateHabitActivity">
+    tools:context=".CreateHabit">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_marginTop="56dp"
+        android:text="Crear hábito"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editDescripcion"
+        app:layout_constraintEnd_toEndOf="@+id/editDescripcion" />
+
+    <EditText
+        android:id="@+id/editDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="253dp"
+        android:ems="10"
+        android:hint="Descripcion"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:onClick="crear"
+        android:text="Guardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openMaps"
+        android:text="Ubicacion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.906" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:gravity="center"
-            android:text="@string/create_habit"
-            android:textColor="@color/black_500"
-            android:textSize="24sp" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="251dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDescripcion" />
 
-        <EditText
-            android:id="@+id/habit_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginRight="24dp"
-            android:background="@drawable/ic_field"
-            android:drawablePadding="16dp"
-            android:ems="10"
-            android:hint="@string/habit_name"
-            android:inputType="textShortMessage"
-            android:maxLength="16"
-            android:padding="16dp"
-            android:autofillHints="name" />
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="6dp"
+        android:text="Frecuencia:"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/editDescripcion" />
 
-        <TextView
-            android:id="@+id/frequencyTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="34dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="28dp"
-            android:gravity="start"
-            android:text="@string/habit_frequency"
-            android:textColor="@color/black_500"
-            android:textSize="16sp" />
+    <Button
+        android:id="@+id/inicioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="260dp"
+        android:text="Hora inicio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
-        <Spinner
-            android:id="@+id/frequencySpinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:spinnerMode="dropdown" />
+    <Button
+        android:id="@+id/finButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Hora fin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inicioButton"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/notificationTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="34dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="28dp"
-            android:gravity="start"
-            android:text="@string/habit_notification"
-            android:textColor="@color/black_500"
-            android:textSize="16sp" />
-
-        <Switch
-            android:id="@+id/notificationSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:checked="true"
-            android:textOff="@string/off"
-            android:textOn="@string/on"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-        <TextView
-            android:id="@+id/hourTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="34dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="28dp"
-            android:gravity="start"
-            android:text="@string/hora"
-            android:textColor="@color/black_500"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/hour_picker_button"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="-50dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:drawable/ic_menu_recent_history"
-            android:paddingLeft="64dp"
-            android:paddingRight="64dp"
-            android:shadowColor="#00673AB7"
-            android:text="@string/date_picker"
-            android:textColor="@color/white"
-            tools:text="@string/date_picker" />
-
-        <TextView
-            android:id="@+id/dateTextView"
-            android:layout_width="131dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="34dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="28dp"
-            android:gravity="start"
-            android:text="@string/start_date"
-            android:textColor="@color/black_500"
-            android:textSize="16sp" />
-
-
-        <Button
-            android:id="@+id/date_picker_button"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="-50dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:drawable/ic_menu_today"
-            android:paddingLeft="64dp"
-            android:paddingRight="64dp"
-            android:text="@string/date_picker"
-            android:textColor="@color/white"
-            tools:text="@string/date_picker" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/createHabitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/ic_button"
-            android:paddingLeft="64dp"
-            android:paddingRight="64dp"
-            android:text="@string/update_profile"
-            android:textColor="@color/white"
-            tools:text="@string/create_habit" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
