@@ -64,5 +64,10 @@ dependencies {
     //Notification
     implementation "androidx.core:core-ktx:1.7.0"
 
+    //Facebook
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+    // Browser support
+    implementation "androidx.browser:browser:1.4.0"
+
 
 }

@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 
 import com.example.atomictracker.databinding.ActivityUserProfileBinding
+import com.facebook.login.LoginManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
@@ -110,6 +111,7 @@ class UserProfileActivity : AppCompatActivity() {
 
     private fun signOut(){
         Firebase.auth.signOut()
+        LoginManager.getInstance().logOut()
         val intent = Intent(this, SignInActivity::class.java)
         startActivity(intent)
     }

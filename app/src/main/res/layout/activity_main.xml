@@ -28,4 +28,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_btn"
+        android:background="@drawable/ic_button"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        />
 </RelativeLayout>
